@@ -22,14 +22,23 @@ By default it listens on `:3333`.
 ```shell
 curl http://127.0.0.1:3333/health
 # exits 0
+# does output to stderr
 ```
 
 ```shell
 curl --fail http://127.0.0.1:3333/health
 # exits 22
+# does output to stderr
 ```
 
 ```shell
 wget -O- http://127.0.0.1:3333/health
 # exits 8
-# ```
+# does output to stderr
+```
+
+```shell
+http http://127.0.0.1:3333/health
+# exits 0
+# does output to stderr
+```
